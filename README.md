@@ -1,28 +1,78 @@
 ![kittygram](https://github.com/aleksey-vasilev/kittygram_final/actions/workflows/main.yml/badge.svg)
 
-#  Как работать с репозиторием финального задания
+## Проект «Kittygram»
 
-## Что нужно сделать
+### Описание:
 
-Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
+Проект Kittygram позволяет собирать информацию котах и кошках пользователей - их фото, клички и достижения.
+Предусмотрена регистрация пользователей и и возможность общения с базой через API.
 
-## Как проверить работу с помощью автотестов
+### Стек:
 
-В корне репозитория создайте файл tests.yml со следующим содержимым:
-```yaml
-repo_owner: ваш_логин_на_гитхабе
-kittygram_domain: полная ссылка (https://доменное_имя) на ваш проект Kittygram
-taski_domain: полная ссылка (https://доменное_имя) на ваш проект Taski
-dockerhub_username: ваш_логин_на_докерхабе
+```
+Python 3.9 as programming language
 ```
 
-Скопируйте содержимое файла `.github/workflows/main.yml` в файл `kittygram_workflow.yml` в корневой директории проекта.
+```
+Django 3.2 as web framework
 
-Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
+```
 
-## Чек-лист для проверки перед отправкой задания
+```
+Django REST framework 3.12 as toolkit for building Web APIs
+```
 
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
+```
+Postgres as database
+```
+
+```
+GitHub as repo and workflows manager
+```
+
+### Установка:
+
+1. Клонировать репозиторий и перейти в него в командной строке:
+
+```
+git clone https://github.com/aleksey-vasilev/kittygram_final
+cd kittygram
+```
+
+2. Создайть файл .env и заполнить его своими данными
+
+```
+POSTGRES_DB=...
+POSTGRES_USER=...
+POSTGRES_PASSWORD=...
+DB_HOST=...
+DB_PORT=..
+```
+
+3. Для установки docker compose на сервер, выполнить следующие действия:
+
+```
+sudo apt update
+sudo apt install curl
+curl -fSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh
+sudo apt-get install docker-compose-plugin
+```
+
+4. Перейти в директорию kittygram/ и запустить docker compose в режиме демона:
+
+```
+sudo docker compose -f docker-compose.production.yml up -d
+```
+
+5. Выполнить миграции и собрать статические файлы бэкенда в /backend_static/static/
+
+```
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/
+```
+
+### Автор:
+
+Алексей Васильев (aleksey-vasilev)
