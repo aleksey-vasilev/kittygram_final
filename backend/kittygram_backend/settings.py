@@ -9,12 +9,12 @@ load_dotenv(BASE_DIR.parent / '.env')
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'default')
 
-DEBUG = False if os.getenv('DEBUG') == 'False' else True
-
-if os.getenv('ALLOWED_HOSTS', ''):
-    ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split())
+if os.getenv('DEBUG', 'False') == 'True':
+    DEBUG = True
 else:
-    ALLOWED_HOSTS = []
+    DEBUG = False
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split()
 
 INSTALLED_APPS = [
     'django.contrib.admin',

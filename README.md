@@ -1,4 +1,4 @@
-![kittygram](https://github.com/aleksey-vasilev/kittygram_final/actions/workflows/main.yml/badge.svg)
+![kittygram](https://github.com/aleksey-vasilev/kittygram_final/actions/workflows/main.yml/badge.svg?event=push)
 
 ## Проект «Kittygram»
 
