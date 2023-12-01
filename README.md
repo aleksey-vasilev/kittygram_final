@@ -4,31 +4,26 @@
 
 ### Описание:
 
-Проект Kittygram позволяет собирать информацию котах и кошках пользователей - их фото, клички и достижения.
+Учебный прокт Kittygram позволяет собирать информацию котах и кошках пользователей - их фото, клички и достижения.
+
 Предусмотрена регистрация пользователей и и возможность общения с базой через API.
 
-### Стек:
+Настроено развертывание через докер и CI/CD через GitHub Actions.
 
-```
-Python 3.9 as programming language
-```
+### Используемые технологии
 
-```
-Django 3.2 as web framework
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Postgres](https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
+![GitHub](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white)
 
-```
+### Необходимые инструменты
 
-```
-Django REST framework 3.12 as toolkit for building Web APIs
-```
-
-```
-Postgres as database
-```
-
-```
-GitHub as repo and workflows manager
-```
+* [Python](https://www.python.org/)
+* [Pip](https://pypi.org/project/pip/)
+* [Django](https://www.djangoproject.com/)
 
 ### Установка:
 
