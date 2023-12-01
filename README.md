@@ -4,7 +4,7 @@
 
 ### Описание:
 
-Учебный прокт Kittygram позволяет собирать информацию котах и кошках пользователей - их фото, клички и достижения.
+Учебный прокт Kittygram (https://mytes.sytes.net/) позволяет собирать информацию котах и кошках пользователей - их фото, клички и достижения.
 
 Предусмотрена регистрация пользователей и и возможность общения с базой через API.
 
@@ -14,7 +14,7 @@
 
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Postgres](https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white)
@@ -24,6 +24,7 @@
 * [Python](https://www.python.org/)
 * [Pip](https://pypi.org/project/pip/)
 * [Django](https://www.djangoproject.com/)
+* [Docker](https://www.docker.com/)
 
 ### Установка:
 
@@ -70,4 +71,4 @@ sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/col
 
 ### Автор:
 
-Алексей Васильев (aleksey-vasilev)
+Алексей Васильев (aleksey-vasilev) - Backend, DevOps, testing.
